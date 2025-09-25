@@ -225,7 +225,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 782628377}
-  - component: {fileID: 782628376}
+  - component: {fileID: 782628378}
   m_Layer: 0
   m_Name: TapHandler
   m_TagString: Untagged
@@ -233,20 +233,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &782628376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 782628375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 562c6097c285e4dd09b664af6343e349, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToPlace: {fileID: 1526554761915109350, guid: 076879464bd682945aa7cd31ae139a36, type: 3}
-  raycastManager: {fileID: 1363899057}
 --- !u!4 &782628377
 Transform:
   m_ObjectHideFlags: 0
@@ -262,6 +248,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &782628378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782628375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 562c6097c285e4dd09b664af6343e349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToPlace: {fileID: 1526554761915109350, guid: 076879464bd682945aa7cd31ae139a36, type: 3}
+  raycastManager: {fileID: 1363899057}
 --- !u!1 &931499902
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,6 +334,7 @@ GameObject:
   - component: {fileID: 1363899059}
   - component: {fileID: 1363899058}
   - component: {fileID: 1363899057}
+  - component: {fileID: 1363899061}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -353,7 +354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa17d122634046b4a8e23048891fafc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RaycastPrefab: {fileID: 8838485651884958289, guid: 628e3e4fa05c447e3a3d93fea3a3c9a3, type: 3}
+  m_RaycastPrefab: {fileID: 0}
 --- !u!114 &1363899058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,6 +402,21 @@ Transform:
   - {fileID: 1981708721}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1363899061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363899056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dea56a9eaadd1c439095de4f9a371cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedLibrary: {fileID: 11400000, guid: add1625416d094982b2cb6da115978e8, type: 2}
+  m_MaxNumberOfMovingImages: 0
+  m_TrackedImagePrefab: {fileID: 8838485651884958289, guid: 628e3e4fa05c447e3a3d93fea3a3c9a3, type: 3}
 --- !u!1 &1981708715
 GameObject:
   m_ObjectHideFlags: 0

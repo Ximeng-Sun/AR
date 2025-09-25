@@ -7,17 +7,27 @@ public class TapToPlace : MonoBehaviour
 {
     public GameObject objectToPlace;
     public ARRaycastManager raycastManager;
+
     private List<ARRaycastHit> hits = new List<ARRaycastHit>();
+
     void Update()
     {
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
-            if (raycastManager.Raycast(touch.position, hits, TrackableType.PlaneWithinPolygon))
+
+            if (touch.phase == TouchPhase.Began)
             {
-                Pose hitPose = hits[0].pose;
-                Instantiate(objectToPlace, hitPose.position, hitPose.rotation);
+                if (raycastManager.Raycast(touch.position, hits, TrackableType.PlaneWithinPolygon))
+                {
+                    Pose hitPose = hits[0].pose;
+
+                    GameObject obj = Instantiate(objectToPlace, hitPose.position, Quaternion.identity);
+
+                    obj.transform.Rotate(0, 90, 0);
+                }
             }
         }
     }
 }
+
